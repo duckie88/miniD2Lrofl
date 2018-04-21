@@ -16,11 +16,13 @@ Final Project - Mini D2L Class website
 	?>
 
 	<h1 class="title">ECE220</h1>
-	<a href="register.php">Register</a> 
-	<a href="login.php">Login</a> 
 	<?php 
 		if (isset($_SESSION['user'])) {
 			echo "<form name=\"logout\" method=\"post\"><input name=\"logout\" type=\"submit\" value=\"Log Out\"></form>";
+			echo "<a href='grades.php'>" . $_SESSION['name'] . "'s Grades</a>";
+		}
+		else{
+		    echo "<a href='login.php'>Login</a>   <a href='register.php'>Register</a>"; 
 		}
 	?>
 	<div id="toChange"></div>
@@ -33,6 +35,7 @@ Final Project - Mini D2L Class website
 	<?php 
 		if (isset($_POST['logout'])) {
 			unset($_SESSION['user']);
+			unset($_SESSION['name']);
 			header("Location: main.php");
 		}
 	?>

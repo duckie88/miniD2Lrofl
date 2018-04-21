@@ -7,7 +7,7 @@ Final Project - Mini D2L Class website
 <head>
 	<meta charset="UTF-8">
 	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href=".css" />
+	<link rel="stylesheet" type="text/css" href="classSite.css" />
 </head>
 <body>
 
@@ -22,7 +22,7 @@ Final Project - Mini D2L Class website
 		<p>Username:</p><input type="text" name="username"> <br>
 		<p>Password:</p><input type="password" name="password"> 
 		<input type="submit" name="Login" value="Login">
-		<input type="button" name="Home" value="Home" onclick="location.href='quotes.php'">
+		<input type="button" name="Home" value="Home" onclick="location.href='main.php'">
 		<br><br>
 	</form>
 	<?php
@@ -36,8 +36,9 @@ Final Project - Mini D2L Class website
     		else {
     			if(strtolower($exist[0]["username"]) === strtolower($user)){
     				if(password_verify($pass, $exist[0]["hash"])){
-    					$_SESSION['user'] = $user;
-    					header("Location: quotes.php");
+    				    $_SESSION['user'] = $exist[0]["username"];
+    					$_SESSION['name'] = $exist[0]["first_name"];
+    					header("Location: main.php");
     				}
     				else {
     					echo "<br>Password is incorrect, try again";
