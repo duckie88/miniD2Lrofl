@@ -14,11 +14,11 @@ Final Project - Mini D2L Class website
 	<?php
 		// Include class and start session
 		session_start ();
-		//include 'DatabaseAdaptor.php';
+		include 'DatabaseAdaptor.php';
 	?>
 
 	<h3>Login</h3>
-	<form name="LoginForm" method="POST">
+	<form name="LoginForm" method="POST" onsubmit = "refresh()">
 		<p>Username:</p><input type="text" name="username"> <br>
 		<p>Password:</p><input type="password" name="password"> 
 		<input type="submit" name="Login" value="Login">
@@ -38,7 +38,7 @@ Final Project - Mini D2L Class website
     				if(password_verify($pass, $exist[0]["hash"])){
     				    $_SESSION['user'] = $exist[0]["username"];
     					$_SESSION['name'] = $exist[0]["first_name"];
-    					header("Location: main.php");
+    					header("Location: grades.php");
     				}
     				else {
     					echo "<br>Password is incorrect, try again";
@@ -47,5 +47,6 @@ Final Project - Mini D2L Class website
     		}
  	 	}
 	?>
+	
 </body>
 </html>

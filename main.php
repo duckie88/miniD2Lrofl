@@ -25,8 +25,8 @@ Final Project - Mini D2L Class website
 		<button class="b1" onclick="show('grades.php')">Grades</button>
 		<?php 
 			if (isset($_SESSION['user'])) {	//TODO
-				echo "<form name=\"logout\" method=\"post\"><input name=\"logout\" type=\"submit\" value=\"Log Out\"></form>";
-				echo "<a href='grades.php'>" . $_SESSION['name'] . "'s Grades</a>";
+				echo "<form name=\"logout\" method=\"post\"><input name=\"logout\" type=\"submit\" class =\"b1\" value=\"Log Out\"></form>";
+				echo "<div class = 'logged'>Welcome " . $_SESSION['name'] . "</a>";
 			}
 			else{
 				echo "<button class=\"b1\" onclick=\"show('login.php')\">Login</button> ";

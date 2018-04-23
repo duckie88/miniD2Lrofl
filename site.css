@@ -28,7 +28,7 @@ div.mainPanel {
 	padding: 10px;
 }
 
-button.b1 {
+.b1 {
 	background: linear-gradient(to bottom right, lightyellow, lightblue);
 	background-repeat: no-repeat;
 	border: none;
@@ -42,4 +42,11 @@ iframe {
 	background: linear-gradient(to bottom right, lightyellow, lightblue);
 	width: 100%;
 	height:700px;
+}
+
+.logged {
+	background : white;
+	border : 1px black;
+	padding : 5px;
+	color : green;
 }
