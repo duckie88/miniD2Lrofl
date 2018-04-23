@@ -14,7 +14,7 @@ Final Project - Mini D2L Class website
 	<?php
 		// Include class and start session
 		session_start ();
-		include 'DatabaseAdaptor.php';
+		//include 'DatabaseAdaptor.php';
 	?>
 
 	<h3>Login</h3>
