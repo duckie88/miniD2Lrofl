@@ -22,7 +22,9 @@ Final Project - Mini D2L Class website
 	<div class="mainPanel">
 		<button class="b1" onclick="show('courseinfo.html')">Course Info</button>
 		<button class="b1" onclick="show('contactinfo.html')">Contact Info</button>
+		<button class="b1" onclick="show('syllabus.php')">Syllabus</button>
 		<button class="b1" onclick="show('grades.php')">Grades</button>
+		<button class="b1" onclick="show('resources.php')">Resources</button>
 		<hr>
 		<iframe id="section" src="courseinfo.html"></iframe>
 	</div>

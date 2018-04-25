@@ -29,8 +29,8 @@ if(isset($_POST['submit'])){
 	$password = $_POST["pass"];
 	$first_name = $_POST["name"];
 	//security stuff
-	$user = htmlspecialchars($user);
-	$pass = htmlspecialchars($pass);
+	$username = htmlspecialchars($username);
+	$password = htmlspecialchars($password);
 	$first_name = htmlspecialchars($first_name);
 	//
 	if($theDBA->checkUser($username) == NULL){
