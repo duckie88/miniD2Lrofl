@@ -17,7 +17,7 @@ Final Project - Mini D2L Class website
 		include 'DatabaseAdaptor.php';
 	?>
 
-	<h3>Login</h3>
+	<p>Please log in to view your grades</p>
 	<form name="LoginForm" method="POST" onsubmit = "refresh()">
 		<p>Username:</p><input type="text" name="username"> <br>
 		<p>Password:</p><input type="password" name="password"> 

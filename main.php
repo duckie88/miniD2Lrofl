@@ -23,16 +23,6 @@ Final Project - Mini D2L Class website
 		<button class="b1" onclick="show('courseinfo.html')">Course Info</button>
 		<button class="b1" onclick="show('contactinfo.html')">Contact Info</button>
 		<button class="b1" onclick="show('grades.php')">Grades</button>
-		<?php 
-			if (isset($_SESSION['user'])) {	//TODO
-				echo "<form name=\"logout\" method=\"post\"><input name=\"logout\" type=\"submit\" class =\"b1\" value=\"Log Out\"></form>";
-				echo "<div class = 'logged'>Welcome " . $_SESSION['name'] . "</a>";
-			}
-			else{
-				echo "<button class=\"b1\" onclick=\"show('login.php')\">Login</button> ";
-				echo "<button class=\"b1\" onclick=\"show('register.php')\">Register</button>";
-			}
-		?>
 		<hr>
 		<iframe id="section" src="courseinfo.html"></iframe>
 	</div>
@@ -43,11 +33,6 @@ Final Project - Mini D2L Class website
 		}
 	</script>
 	
-	<?php 
-		if (isset($_POST['logout'])) {
-			unset($_SESSION['user']);
-			unset($_SESSION['name']);
-		}
-	?>
+	
 </body>
 </html>
