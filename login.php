@@ -16,15 +16,19 @@ Final Project - Mini D2L Class website
 		session_start ();
 		include 'DatabaseAdaptor.php';
 	?>
-
-	<p>Please log in to view your grades</p>
+	
+	<h3>Login</h3>
 	<form name="LoginForm" method="POST" onsubmit = "refresh()">
-		<p>Username:</p><input type="text" name="username"> <br>
-		<p>Password:</p><input type="password" name="password"> 
+		Username : <input type="text" name="username"><br><br>
+		Password : <input type="password" name="password"><br><br>
 		<input type="submit" name="Login" value="Login">
-		<input type="button" name="Home" value="Home" onclick="location.href='main.php'">
-		<br><br>
+		<input type="button" name="Back" value="Back" onclick="location.href='grades.php'"></p>
+		<br>
 	</form>
+	
+	<!-- 
+	When user is entered properly, it will return to the main page
+	 -->
 	<?php
  	 	if( isset(  $_POST['Login'])) {
     		$user = $_POST['username'];

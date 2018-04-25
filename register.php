@@ -15,10 +15,11 @@ session_start();
 <body>
 <form class = "form" action="" method="post">
 <h3>Register</h3>
-  Username  : <input name="user" type="text" /><br><br>
-  First Name: <input name="name" type="text" /><br><br>
-  Password  : <input name="pass" type="password" /><br><br>
-  <input name="submit" type="submit" />
+  	Username  : <input name="user" type="text" /><br><br>
+  	First Name: <input name="name" type="text" /><br><br>
+  	Password  : <input name="pass" type="password" /><br><br>
+  	<input name="submit" type="submit" />
+	<input type="button" name="Back" value="Back" onclick="location.href='grades.php'">
 </form>
 <?php 
 include 'DataBaseAdaptor.php';
@@ -32,7 +33,7 @@ if(isset($_POST['submit'])){
 				$theDBA->addUser($username, $pass, $first_name);
 				$_SESSION['user'] = $user;
 				$_SESSION['name'] = $first_name;
-				header("Location: main.php");
+				header("Location: grades.php");
 			}
 	else echo "That username already exists, try another or login.<br><a href=\"main.php\">Main</a>";
 }
