@@ -33,6 +33,10 @@ Final Project - Mini D2L Class website
  	 	if( isset(  $_POST['Login'])) {
     		$user = $_POST['username'];
     		$pass = $_POST['password'];
+    		//security stuff
+    		$user = htmlspecialchars($user);
+    		$pass = htmlspecialchars($pass);
+    		//
     		$exist = $theDBA->checkUser($user);
     		if ($exist == NULL) {
     			echo "<br>Username does not exist";

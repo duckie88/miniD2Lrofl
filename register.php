@@ -28,6 +28,11 @@ if(isset($_POST['submit'])){
 	$username = $_POST["user"];
 	$password = $_POST["pass"];
 	$first_name = $_POST["name"];
+	//security stuff
+	$user = htmlspecialchars($user);
+	$pass = htmlspecialchars($pass);
+	$first_name = htmlspecialchars($first_name);
+	//
 	if($theDBA->checkUser($username) == NULL){
 				$pass = password_hash($password, PASSWORD_DEFAULT);
 				$theDBA->addUser($username, $pass, $first_name);
@@ -35,7 +40,7 @@ if(isset($_POST['submit'])){
 				$_SESSION['name'] = $first_name;
 				header("Location: grades.php");
 			}
-	else echo "That username already exists, try another or login.<br><a href=\"main.php\">Main</a>";
+	else echo "That username already exists, try another or <a href='login.php'>log in</a>";
 }
 ?>
 </body>
