@@ -44,8 +44,6 @@ iframe {
 	height:700px;
 }
 
-.logged {
-	background : white;
-	border : 1px black;
-	padding : 5px;
+.links {
+	height : 50px;
 }
